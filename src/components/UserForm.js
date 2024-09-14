@@ -4,8 +4,8 @@ import FormPaswordDetail  from './FormPaswordDetail'
 import  Conform  from './Conform'
 import Success  from './success'
 
-const UserForm = () => {
-    const [step, setStep] = useState(1);
+const UserForm = ({step, setStep}) => {
+    
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
@@ -63,7 +63,7 @@ const UserForm = () => {
     return (
             <Conform
              prevSTEP={prevSTEP}
-             setStep={setStep}
+             nextSTEP={nextSTEP}
              firstName={firstName}
              lastName={lastName} 
              email={email}
